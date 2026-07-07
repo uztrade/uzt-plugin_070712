@@ -1,0 +1,154 @@
+/* ============================================================
+   Uztrading Top List — стили плагина uzt-plugin.
+   Переменные согласованы с дизайн-системой Uztrading v1.0.
+   ============================================================ */
+
+.uzt-toplist {
+	--uzt-brand:        var(--brand-primary, #0B5FFF);
+	--uzt-brand-hover:  #0A4FD9;
+	--uzt-neutral-50:   #F7F9FC;
+	--uzt-neutral-200:  #E2E8F0;
+	--uzt-neutral-700:  #334155;
+	--uzt-neutral-900:  #0F172A;
+	--uzt-stars:        var(--stars, #F5A623);
+	--uzt-success:      var(--success, #0A7A3B);
+	--uzt-warning:      var(--warning, #9A6B00);
+	--uzt-danger:       #EF4444;
+
+	font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+	color: var(--uzt-neutral-700);
+	line-height: 1.5;
+}
+.uzt-toplist__heading { font-size: 24px; font-weight: 600; margin: 32px 0 20px; color: var(--uzt-neutral-900); }
+
+/* --- Notices (только для админа) --- */
+.uzt-notice { padding: 12px 16px; border-radius: 6px; margin: 16px 0; font-size: 14px; }
+.uzt-notice--warn { background: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; }
+
+/* --- 1. Компактный список --- */
+.uzt-compact-list { margin-bottom: 40px; }
+.uzt-compact-list__intro { font-size: 15px; margin-bottom: 20px; }
+.uzt-compact-list__items { display: flex; flex-direction: column; gap: 16px; }
+.uzt-compact-item { display: flex; align-items: flex-start; gap: 12px; }
+.uzt-compact-item__rank { background: var(--uzt-stars); color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px; flex-shrink: 0; }
+.uzt-compact-item__logo { width: 32px; height: 32px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid var(--uzt-neutral-200); border-radius: 4px; padding: 2px; }
+.uzt-compact-item__logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.uzt-compact-item__content { font-size: 15px; }
+.uzt-compact-item__name { font-weight: 600; color: var(--uzt-brand); text-decoration: none; }
+.uzt-compact-item__buzz { color: var(--uzt-neutral-700); }
+.uzt-compact-item__risk { font-size: 11px; color: #64748B; margin-top: 2px; }
+
+/* --- 2. Мега-карточка брокера --- */
+.uzt-main-rating { display: flex; flex-direction: column; gap: 24px; margin-bottom: 40px; }
+.uzt-mega-card { background: #fff; border: 1px solid var(--uzt-neutral-200); border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; }
+.uzt-mega-card__ribbon { position: absolute; top: 0; left: 0; background-color: var(--uzt-stars); color: #fff; font-size: 10px; font-weight: 700; padding: 4px 12px; border-radius: 0 0 8px 0; z-index: 2; letter-spacing: 0.5px; }
+.uzt-mega-card__main-row { display: flex; flex-direction: column; padding: 24px; gap: 20px; border-bottom: 1px solid var(--uzt-neutral-200); }
+
+/* Бренд + звёзды */
+.uzt-mega-brand { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.uzt-mega-logo-wrapper { width: 140px; height: 60px; background: #fff; border: 1px solid var(--uzt-neutral-200); border-radius: 8px; padding: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+.uzt-mega-logo-wrapper img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.uzt-mega-stars-row { display: flex; align-items: center; gap: 6px; }
+.uzt-stars-visual { color: var(--uzt-stars); font-size: 16px; letter-spacing: -1px; }
+.star-e { color: var(--uzt-neutral-200); }
+.uzt-score-num { font-size: 14px; color: var(--uzt-neutral-700); }
+
+/* Плюсы */
+.uzt-mega-pros-main { flex: 1; padding: 0; }
+.uzt-block-title-mini { display: block; font-size: 12px; color: #64748B; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; letter-spacing: 0.5px; }
+.uzt-mega-pros-main ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.uzt-mega-pros-main li { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; color: var(--uzt-neutral-700); line-height: 1.4; }
+.uzt-pro-icon { color: var(--uzt-success); font-weight: bold; font-size: 15px; line-height: 1; }
+
+/* CTA */
+.uzt-mega-cta-zone { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.uzt-btn-visit { display: block; width: 100%; background: var(--uzt-success); color: #fff !important; font-weight: 700; padding: 12px 10px; border-radius: 6px; text-decoration: none !important; font-size: 14px; text-transform: uppercase; margin-bottom: 6px; text-align: center; transition: background 0.2s; letter-spacing: 0.3px; }
+.uzt-btn-visit:hover { background: #086A34; }
+.uzt-btn-review { font-size: 14px; color: var(--uzt-brand); font-weight: 600; text-decoration: underline; margin-bottom: 8px; }
+.uzt-btn-review:hover { color: var(--uzt-brand-hover); }
+.uzt-status-avail { font-size: 12px; color: #166534; font-weight: 600; margin-bottom: 4px; }
+.uzt-micro-risk { font-size: 11px; color: #94A3B8; }
+
+/* Инфо-пилюли */
+.uzt-mega-card__visible-info { background: var(--uzt-neutral-50); padding: 12px 24px; display: flex; flex-direction: column; gap: 10px; border-bottom: 1px solid var(--uzt-neutral-200); }
+.uzt-info-pill { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--uzt-neutral-700); }
+.uzt-info-pill svg { stroke: var(--uzt-brand); flex-shrink: 0; }
+.uzt-info-pill .pill-label { color: #64748B; }
+.uzt-info-pill .pill-value { font-weight: 600; color: var(--uzt-neutral-900); }
+
+/* Аккордеон */
+.uzt-mega-accordion__summary { padding: 14px 24px; font-size: 14px; font-weight: 600; color: var(--uzt-brand); cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; list-style: none; background: #fff; transition: background 0.2s; }
+.uzt-mega-accordion__summary::-webkit-details-marker { display: none; }
+.uzt-mega-accordion__summary:hover { background: var(--uzt-neutral-50); }
+.uzt-mega-accordion[open] .uzt-acc-icon { transform: rotate(180deg); }
+.uzt-acc-icon { display: inline-block; transition: transform 0.2s; font-size: 12px; }
+.uzt-mega-accordion__content { padding: 24px; background: #fff; border-top: 1px solid var(--uzt-neutral-200); }
+
+/* Спецификации */
+.uzt-premium-checklist ul { list-style: none; padding: 0; margin: 0 0 24px 0; display: flex; flex-direction: column; gap: 10px; }
+.uzt-premium-checklist li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; padding: 14px 16px; background: var(--uzt-neutral-50); border: 1px solid var(--uzt-neutral-200); border-radius: 8px; }
+.uzt-chk-icon { color: var(--uzt-success); font-weight: bold; font-size: 16px; line-height: 1.2; flex-shrink: 0; }
+.uzt-chk-content { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.uzt-chk-label { color: #64748B; font-weight: 500; }
+.uzt-chk-value { color: var(--uzt-neutral-900); font-weight: 600; text-align: left; }
+
+/* Минусы */
+.uzt-cons-title-mini { display: block; font-size: 12px; color: #64748B; text-transform: uppercase; font-weight: 600; margin-bottom: 12px; letter-spacing: 0.5px; }
+.uzt-cons-list-ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
+.uzt-cons-list-ul li { display: flex; align-items: flex-start; gap: 8px; color: var(--uzt-neutral-700); line-height: 1.4; }
+.uzt-con-icon { color: var(--uzt-danger); font-weight: bold; font-size: 15px; line-height: 1; flex-shrink: 0; }
+
+/* --- Desktop --- */
+@media (min-width: 768px) {
+	.uzt-mega-card__main-row { flex-direction: row; align-items: center; justify-content: space-between; }
+	.uzt-mega-brand { flex: 0 0 160px; }
+	.uzt-mega-pros-main { padding: 0 20px; }
+	.uzt-mega-cta-zone { flex: 0 0 200px; }
+	.uzt-mega-card__visible-info { flex-direction: row; align-items: center; justify-content: space-between; }
+	.uzt-chk-content { flex-direction: row; align-items: center; justify-content: space-between; gap: 16px; }
+	.uzt-chk-value { text-align: right; }
+}
+
+/* ============================================================
+   Подробная карточка [uzt_broker_card] — минимальные стили.
+   ============================================================ */
+.uzt-detail-card { border: 1px solid var(--uzt-neutral-200, #E2E8F0); border-radius: 12px; padding: 24px; margin: 16px 0; background: #fff; }
+.uzt-detail-card__heading { font-size: 20px; margin: 0 0 16px; }
+.uzt-detail-card__header { display: grid; grid-template-columns: 1fr; gap: 20px; margin-bottom: 16px; }
+@media (min-width: 768px) { .uzt-detail-card__header { grid-template-columns: 200px 1fr 1fr 200px; } }
+.uzt-detail-col { display: flex; flex-direction: column; gap: 8px; }
+.uzt-detail-col--brand { align-items: center; text-align: center; }
+.uzt-detail-rank-tag { background: var(--uzt-brand, #0B5FFF); color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-bottom: 8px; }
+.uzt-col-label { font-size: 12px; text-transform: uppercase; color: #64748B; font-weight: 600; }
+.uzt-check-list { list-style: none; padding: 0; margin: 0; }
+.uzt-check-list li { padding: 4px 0 4px 20px; position: relative; }
+.uzt-check-list li::before { content: "✓"; position: absolute; left: 0; color: var(--uzt-success, #0A7A3B); font-weight: 700; }
+.uzt-detail-col--cta { align-items: center; text-align: center; }
+.uzt-stars-text--lg { font-size: 18px; margin-bottom: 8px; }
+.uzt-star-icon { color: var(--uzt-stars, #F5A623); }
+.uzt-stars-max { color: #64748B; font-size: 14px; }
+.uzt-btn-primary--lg { display: inline-block; background: var(--uzt-success, #0A7A3B); color: #fff !important; padding: 12px 20px; border-radius: 6px; text-decoration: none !important; font-weight: 700; margin-bottom: 8px; }
+.uzt-btn-primary--lg:hover { background: #086A34; }
+.uzt-risk-note { font-size: 11px; color: #94A3B8; margin-bottom: 4px; }
+.uzt-avail-note { font-size: 12px; color: #166534; font-weight: 600; margin: 4px 0; }
+.uzt-review-link { font-size: 13px; color: var(--uzt-brand, #0B5FFF); text-decoration: underline; }
+.uzt-detail-card__info { display: flex; gap: 20px; flex-wrap: wrap; padding: 12px 0; border-top: 1px solid var(--uzt-neutral-200, #E2E8F0); font-size: 13px; }
+
+/* Аккордеон детальной карточки */
+.uzt-accordion { margin-top: 16px; border-top: 1px solid var(--uzt-neutral-200, #E2E8F0); padding-top: 12px; }
+.uzt-accordion__toggle { cursor: pointer; font-weight: 600; color: var(--uzt-brand, #0B5FFF); }
+.uzt-accordion__icon { display: inline-block; margin-right: 6px; }
+.uzt-accordion__content { padding: 12px 0; }
+.uzt-pros__title, .uzt-cons__title { font-size: 14px; margin: 12px 0 6px; }
+.uzt-pros__list li, .uzt-cons__list li { padding: 2px 0 2px 20px; position: relative; }
+.uzt-pros__list li::before { content: "✓"; position: absolute; left: 0; color: var(--uzt-success, #0A7A3B); font-weight: 700; }
+.uzt-cons__list li::before { content: "✕"; position: absolute; left: 0; color: var(--uzt-danger, #EF4444); font-weight: 700; }
+
+/* ============================================================
+   FAQ [uzt_faq]
+   ============================================================ */
+.uzt-faq { margin: 32px 0; }
+.uzt-faq__heading { font-size: 22px; margin: 0 0 16px; }
+.uzt-faq__item { border: 1px solid var(--uzt-neutral-200, #E2E8F0); border-radius: 8px; margin-bottom: 8px; padding: 12px 16px; background: #fff; }
+.uzt-faq__q { cursor: pointer; font-weight: 600; color: var(--uzt-neutral-900, #0F172A); font-size: 15px; }
+.uzt-faq__a { margin-top: 8px; color: var(--uzt-neutral-700, #334155); font-size: 14px; line-height: 1.6; }
